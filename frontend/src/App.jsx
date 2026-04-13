@@ -38,7 +38,7 @@ export default function App() {
 
   // Check existing session
   useEffect(() => {
-    const token = localStorage.getItem('vheal_token')
+    const token = localStorage.getItem('sevaarth_token')
     if (token) {
       api.me()
         .then(u => { setUser(u); setActivePage(getDefaultPage(u.role)) })
@@ -69,8 +69,8 @@ export default function App() {
     return (
       <div className="min-h-screen bg-surface-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="w-10 h-10 border-2 border-vheal-500/30 border-t-vheal-500 rounded-full animate-spin mx-auto mb-3" />
-          <p className="text-gray-500 text-sm">Loading VHEAL...</p>
+          <div className="w-10 h-10 border-2 border-sevaarth-500/30 border-t-sevaarth-500 rounded-full animate-spin mx-auto mb-3" />
+          <p className="text-gray-500 text-sm">Loading SEVAARTH...</p>
         </div>
       </div>
     )
@@ -100,10 +100,10 @@ export default function App() {
         {/* Logo */}
         <div className="px-5 py-5 border-b border-white/5">
           <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-xl bg-vheal-600 flex items-center justify-center text-lg font-black text-white">V</div>
+            <div className="w-9 h-9 rounded-xl bg-sevaarth-600 flex items-center justify-center text-lg font-black text-white">S</div>
             <div>
-              <span className="text-lg font-black text-white tracking-tight block leading-5">VHEAL</span>
-              <span className="text-[10px] text-vheal-400 font-medium">Patient Protection OS</span>
+              <span className="text-lg font-black text-white tracking-tight block leading-5">Sevaarth AI</span>
+              <span className="text-[10px] text-sevaarth-400 font-medium">Patient Protection OS</span>
             </div>
           </div>
         </div>

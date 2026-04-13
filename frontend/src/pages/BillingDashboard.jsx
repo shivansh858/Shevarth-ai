@@ -49,14 +49,14 @@ export default function BillingDashboard({ user }) {
           <h2 className="section-title text-base">Patients</h2>
           {patients?.map(p => (
             <button key={p.id} onClick={() => viewBill(p.id)}
-              className={`w-full text-left card-sm transition-all ${selectedPatientId === p.id ? 'border-vheal-500/50 glow-blue' : 'hover:border-white/10'}`}
+              className={`w-full text-left card-sm transition-all ${selectedPatientId === p.id ? 'border-sevaarth-500/50 glow-blue' : 'hover:border-white/10'}`}
             >
               <div className="flex justify-between items-center">
                 <span className="text-white font-medium text-sm">{p.name}</span>
                 <span className={`badge text-[10px] ${p.payment_status === 'paid' ? 'badge-discharged' : p.payment_status === 'disputed' ? 'badge-high' : 'badge-admitted'}`}>{p.payment_status || 'No Bill'}</span>
               </div>
               <p className="text-xs text-gray-500">{p.diagnosis}</p>
-              {p.total_amount > 0 && <p className="text-sm font-mono text-vheal-300 mt-1">₹{p.total_amount?.toLocaleString()}</p>}
+              {p.total_amount > 0 && <p className="text-sm font-mono text-sevaarth-300 mt-1">₹{p.total_amount?.toLocaleString()}</p>}
               {p.flagged_items > 0 && <span className="text-red-400 text-xs">🚩 {p.flagged_items} flagged</span>}
               {p.open_disputes > 0 && <span className="text-amber-400 text-xs ml-2">⚖ {p.open_disputes} disputes</span>}
             </button>
@@ -115,7 +115,7 @@ export default function BillingDashboard({ user }) {
                               <button onClick={() => setEditingItem(null)} className="text-gray-500 text-xs hover:underline">Cancel</button>
                             </div>
                           ) : (
-                            <button onClick={() => { setEditingItem(item.id); setEditPrice(item.unit_price) }} className="text-vheal-400 text-xs hover:underline">Edit</button>
+                            <button onClick={() => { setEditingItem(item.id); setEditPrice(item.unit_price) }} className="text-sevaarth-400 text-xs hover:underline">Edit</button>
                           )}
                         </td>
                       </tr>

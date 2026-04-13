@@ -63,7 +63,7 @@ app.use((err, req, res, next) => {
 
 app.listen(PORT, () => {
   console.log(`\n═══════════════════════════════════════════════`);
-  console.log(`  VHEAL Patient Protection OS — Backend`);
+  console.log(`  SEVAARTH Patient Protection OS — Backend`);
   console.log(`  Running on http://localhost:${PORT}`);
   console.log(`  ML Service expected at ${process.env.ML_SERVICE_URL || 'http://localhost:8000'}`);
   console.log(`═══════════════════════════════════════════════\n`);

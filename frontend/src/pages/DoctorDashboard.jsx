@@ -63,14 +63,14 @@ export default function DoctorDashboard({ user }) {
         <div className="w-80 shrink-0 space-y-2">
           <h2 className="section-title text-base">My Patients ({patients?.length || 0})</h2>
           {loading && !patients ? (
-            <div className="card py-8 text-center"><div className="w-6 h-6 border-2 border-vheal-500/30 border-t-vheal-500 rounded-full animate-spin mx-auto" /></div>
+            <div className="card py-8 text-center"><div className="w-6 h-6 border-2 border-sevaarth-500/30 border-t-sevaarth-500 rounded-full animate-spin mx-auto" /></div>
           ) : patients?.length === 0 ? (
             <div className="card text-center py-8 text-gray-500">No patients assigned.<br/><span className="text-xs">Load demo from Admin panel</span></div>
           ) : patients?.map(p => (
             <button
               key={p.id}
               onClick={() => setSelectedPatient(p)}
-              className={`w-full text-left card-sm transition-all ${selectedPatient?.id === p.id ? 'border-vheal-500/50 glow-blue' : 'hover:border-white/10'} ${p.state === 'DISCHARGING' ? 'pulse-border' : ''}`}
+              className={`w-full text-left card-sm transition-all ${selectedPatient?.id === p.id ? 'border-sevaarth-500/50 glow-blue' : 'hover:border-white/10'} ${p.state === 'DISCHARGING' ? 'pulse-border' : ''}`}
             >
               <div className="flex items-center justify-between mb-1">
                 <span className="font-semibold text-white text-sm">{p.name}</span>
@@ -123,7 +123,7 @@ export default function DoctorDashboard({ user }) {
                   <div className="flex flex-wrap gap-1.5 mb-2">
                     {commonTests.map(t => (
                       <button type="button" key={t} onClick={() => setTestForm({...testForm, test_name: t})}
-                        className={`text-xs px-2.5 py-1 rounded-lg border transition-all ${testForm.test_name === t ? 'bg-vheal-600 border-vheal-500 text-white' : 'border-white/10 text-gray-400 hover:text-white hover:border-white/20'}`}
+                        className={`text-xs px-2.5 py-1 rounded-lg border transition-all ${testForm.test_name === t ? 'bg-sevaarth-600 border-sevaarth-500 text-white' : 'border-white/10 text-gray-400 hover:text-white hover:border-white/20'}`}
                       >{t}</button>
                     ))}
                   </div>
@@ -140,7 +140,7 @@ export default function DoctorDashboard({ user }) {
                     <span className="font-semibold">{testResult.test_name}</span>
                     <span className={`ml-2 badge ${testResult.is_in_protocol ? 'badge-discharged' : 'badge-high'}`}>{testResult.is_in_protocol ? '✓ In Protocol' : '⚠ Outside Protocol'}</span>
                     {testResult.justification_score != null && (
-                      <span className="ml-2 text-gray-400">NLP Score: <span className="text-vheal-300 font-mono">{testResult.justification_score.toFixed(2)}</span></span>
+                      <span className="ml-2 text-gray-400">NLP Score: <span className="text-sevaarth-300 font-mono">{testResult.justification_score.toFixed(2)}</span></span>
                     )}
                     <p className="text-gray-400 mt-1">Billed: ₹{testResult.billed_amount} · Benchmark: ₹{testResult.benchmark_amount}</p>
                   </div>

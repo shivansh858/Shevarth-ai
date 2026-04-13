@@ -1,7 +1,7 @@
 const BASE = import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api` : '/api'
 
 function getToken() {
-  return localStorage.getItem('vheal_token')
+  return localStorage.getItem('sevaarth_token')
 }
 
 function headers() {
@@ -76,8 +76,8 @@ export const api = {
 }
 
 export function setToken(token) {
-  localStorage.setItem('vheal_token', token)
+  localStorage.setItem('sevaarth_token', token)
 }
 export function clearToken() {
-  localStorage.removeItem('vheal_token')
+  localStorage.removeItem('sevaarth_token')
 }

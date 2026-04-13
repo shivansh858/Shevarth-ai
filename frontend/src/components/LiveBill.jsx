@@ -59,7 +59,7 @@ export default function LiveBill({ bill, fraudFlags, onDispute }) {
                     {item.duplicate_flag ? <span className="text-amber-400 text-xs ml-1" title="Possible duplicate">◈</span> : null}
                   </td>
                   <td>
-                    <button onClick={() => onDispute?.(item)} className="text-vheal-400 text-[10px] hover:underline">Dispute</button>
+                    <button onClick={() => onDispute?.(item)} className="text-sevaarth-400 text-[10px] hover:underline">Dispute</button>
                   </td>
                 </tr>
               )
@@ -78,7 +78,7 @@ export default function LiveBill({ bill, fraudFlags, onDispute }) {
       {/* Bill Versions */}
       {bill.versions?.length > 1 && (
         <details className="mt-4">
-          <summary className="text-sm text-vheal-400 cursor-pointer hover:text-vheal-300">📜 View Bill History ({bill.versions.length} versions)</summary>
+          <summary className="text-sm text-sevaarth-400 cursor-pointer hover:text-sevaarth-300">📜 View Bill History ({bill.versions.length} versions)</summary>
           <div className="mt-2 space-y-1.5">
             {bill.versions.map(v => (
               <div key={v.id} className="bg-surface-700 rounded-lg px-3 py-2 flex items-center justify-between text-xs">

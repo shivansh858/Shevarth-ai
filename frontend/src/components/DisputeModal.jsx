@@ -42,7 +42,7 @@ export default function DisputeModal({ item, options, onClose, onSubmit }) {
                   key={i}
                   type="button"
                   onClick={() => setDescription(opt.description || opt)}
-                  className="text-xs px-3 py-1.5 rounded-lg border border-white/10 text-gray-300 hover:text-white hover:border-vheal-500/40 transition-all"
+                  className="text-xs px-3 py-1.5 rounded-lg border border-white/10 text-gray-300 hover:text-white hover:border-sevaarth-500/40 transition-all"
                 >
                   {typeof opt === 'string' ? opt : opt.label}
                 </button>

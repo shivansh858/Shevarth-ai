@@ -2,7 +2,7 @@ const Database = require('better-sqlite3');
 const path = require('path');
 const fs = require('fs');
 
-const DB_PATH = process.env.DB_PATH || path.join(__dirname, 'vheal.db');
+const DB_PATH = process.env.DB_PATH || path.join(__dirname, 'sevaarth.db');
 const SCHEMA_PATH = path.join(__dirname, 'schema.sql');
 
 let db;

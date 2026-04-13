@@ -18,7 +18,7 @@ export default function PatientPortal({ user }) {
   const fetchPortal = useCallback(() => api.patientPortal(), [])
   const { data, loading, refetch, secondsAgo } = usePolling(fetchPortal)
 
-  if (loading && !data) return <div className="flex-1 flex items-center justify-center"><div className="w-8 h-8 border-2 border-vheal-500/30 border-t-vheal-500 rounded-full animate-spin" /></div>
+  if (loading && !data) return <div className="flex-1 flex items-center justify-center"><div className="w-8 h-8 border-2 border-sevaarth-500/30 border-t-sevaarth-500 rounded-full animate-spin" /></div>
   if (!data) return <div className="flex-1 p-6"><div className="card text-center py-20 text-gray-500">Unable to load patient portal</div></div>
 
   const { patient, state_history, discharge_tasks, test_orders, medicines, bill, fraud_flags, disputes, rights, govt_schemes, dispute_options, notifications } = data
@@ -68,9 +68,9 @@ export default function PatientPortal({ user }) {
               const active = task?.status === 'pending'
               return (
                 <div key={step.key} className="flex items-center gap-2">
-                  <div className={`flex flex-col items-center gap-1 px-4 py-3 rounded-xl min-w-[120px] border transition-all ${completed ? 'bg-emerald-500/10 border-emerald-500/30' : active ? 'bg-vheal-600/10 border-vheal-500/30 animate-pulse-slow' : 'bg-surface-700 border-white/5'}`}>
+                  <div className={`flex flex-col items-center gap-1 px-4 py-3 rounded-xl min-w-[120px] border transition-all ${completed ? 'bg-emerald-500/10 border-emerald-500/30' : active ? 'bg-sevaarth-600/10 border-sevaarth-500/30 animate-pulse-slow' : 'bg-surface-700 border-white/5'}`}>
                     <span className="text-2xl">{completed ? '✅' : active ? step.icon : '⬜'}</span>
-                    <span className={`text-xs font-semibold ${completed ? 'text-emerald-400' : active ? 'text-vheal-300' : 'text-gray-500'}`}>{step.label}</span>
+                    <span className={`text-xs font-semibold ${completed ? 'text-emerald-400' : active ? 'text-sevaarth-300' : 'text-gray-500'}`}>{step.label}</span>
                     {task?.completed_at && <span className="text-[10px] text-gray-500">{new Date(task.completed_at).toLocaleTimeString()}</span>}
                   </div>
                   {i < STEPS.length - 1 && <div className={`w-8 h-0.5 ${completed ? 'bg-emerald-500' : 'bg-surface-600'}`} />}

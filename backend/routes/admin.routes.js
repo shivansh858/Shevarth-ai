@@ -24,7 +24,7 @@ router.post('/register', authenticateToken, requireRole('admin'), async (req, re
     const db = getDb();
     const rawPassword = generatePassword();
     const passwordHash = await bcrypt.hash(rawPassword, SALT_ROUNDS);
-    const email = `patient_${name.toLowerCase().replace(/\s+/g, '_')}_${Date.now()}@vheal.com`;
+    const email = `patient_${name.toLowerCase().replace(/\s+/g, '_')}_${Date.now()}@sevaarth.com`;
     const qrToken = generateQrToken();
 
     // Create user account for patient
@@ -219,7 +219,7 @@ router.post('/load-demo', authenticateToken, requireRole('admin'), async (req, r
     const createPatientUser = async (name) => {
       const pass = generatePassword();
       const hash = await bcrypt.hash(pass, SALT_ROUNDS);
-      const email = `${name.toLowerCase().replace(/\s+/g, '.')}@patient.vheal.com`;
+      const email = `${name.toLowerCase().replace(/\s+/g, '.')}@patient.sevaarth.com`;
       
       const existing = db.prepare('SELECT id FROM users WHERE email = ?').get(email);
       if (existing) return existing.id;
@@ -231,8 +231,8 @@ router.post('/load-demo', authenticateToken, requireRole('admin'), async (req, r
     };
 
     // Get doctor IDs
-    const drMehta = db.prepare("SELECT id FROM users WHERE email = 'doctor@vheal.com'").get();
-    const drSharma = db.prepare("SELECT id FROM users WHERE email = 'doctor2@vheal.com'").get();
+    const drMehta = db.prepare("SELECT id FROM users WHERE email = 'doctor@sevaarth.com'").get();
+    const drSharma = db.prepare("SELECT id FROM users WHERE email = 'doctor2@sevaarth.com'").get();
     const nurse = db.prepare("SELECT id FROM users WHERE role = 'nurse' LIMIT 1").get();
     const pharmacy = db.prepare("SELECT id FROM users WHERE role = 'pharmacy' LIMIT 1").get();
     const billing = db.prepare("SELECT id FROM users WHERE role = 'billing' LIMIT 1").get();

@@ -1,4 +1,4 @@
-"""VHEAL ML Service — FastAPI Application"""
+"""SEVAARTH ML Service — FastAPI Application"""
 import os
 import sys
 from fastapi import FastAPI, HTTPException
@@ -18,7 +18,7 @@ from models.stay_predictor import predictor as stay_predictor
 from models.fraud_scorer import scorer as fraud_scorer
 from models.justification_nlp import score_justification, fuzzy_match_items
 
-app = FastAPI(title="VHEAL ML Service", version="1.0.0", description="ML-powered fraud detection for hospital billing")
+app = FastAPI(title="SEVAARTH ML Service", version="1.0.0", description="ML-powered fraud detection for hospital billing")
 
 app.add_middleware(
     CORSMiddleware,
@@ -76,7 +76,7 @@ class AnalyzePatternsRequest(BaseModel):
 
 @app.get("/")
 def root():
-    return {"service": "VHEAL ML Service", "status": "running", "models": ["billing_anomaly", "referral_cluster", "stay_predictor", "fraud_scorer", "justification_nlp"]}
+    return {"service": "SEVAARTH ML Service", "status": "running", "models": ["billing_anomaly", "referral_cluster", "stay_predictor", "fraud_scorer", "justification_nlp"]}
 
 @app.get("/health")
 def health():
@@ -175,7 +175,7 @@ def analyze_patterns(req: AnalyzePatternsRequest):
 # ── Train models on startup ──
 @app.on_event("startup")
 def startup_event():
-    print("🚀 VHEAL ML Service starting...")
+    print("🚀 SEVAARTH ML Service starting...")
     # Try to load or train models
     for name, model in [
         ("Billing Anomaly", billing_detector),

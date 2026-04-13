@@ -12,17 +12,17 @@
   ::-webkit-scrollbar { width: 6px; height: 6px; }
   ::-webkit-scrollbar-track { @apply bg-surface-800; }
   ::-webkit-scrollbar-thumb { @apply bg-surface-500 rounded-full; }
-  ::-webkit-scrollbar-thumb:hover { @apply bg-vheal-500; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-sevaarth-500; }
 }
 
 @layer components {
   .card { @apply bg-surface-800 border border-white/5 rounded-2xl p-5; }
   .card-sm { @apply bg-surface-800 border border-white/5 rounded-xl p-4; }
-  .btn-primary { @apply bg-vheal-600 hover:bg-vheal-500 text-white font-semibold px-4 py-2 rounded-xl transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed; }
+  .btn-primary { @apply bg-sevaarth-600 hover:bg-sevaarth-500 text-white font-semibold px-4 py-2 rounded-xl transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed; }
   .btn-ghost { @apply text-gray-400 hover:text-white hover:bg-white/5 px-3 py-2 rounded-xl transition-all; }
   .btn-danger { @apply bg-red-600/80 hover:bg-red-500 text-white font-semibold px-4 py-2 rounded-xl transition-all; }
   .btn-success { @apply bg-emerald-600/80 hover:bg-emerald-500 text-white font-semibold px-4 py-2 rounded-xl transition-all; }
-  .input-field { @apply bg-surface-700 border border-white/10 rounded-xl px-4 py-2.5 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-vheal-500 focus:ring-1 focus:ring-vheal-500/50 transition-all w-full; }
+  .input-field { @apply bg-surface-700 border border-white/10 rounded-xl px-4 py-2.5 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-sevaarth-500 focus:ring-1 focus:ring-sevaarth-500/50 transition-all w-full; }
   .badge { @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold; }
   .section-title { @apply text-lg font-bold text-white mb-4; }
   .stat-card { @apply card flex flex-col gap-1; }
@@ -52,7 +52,7 @@
 
 /* Sidebar */
 .sidebar-link { @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-400 hover:text-white hover:bg-white/5 transition-all text-sm font-medium; }
-.sidebar-link.active { @apply bg-vheal-600/20 text-vheal-300 border border-vheal-500/20; }
+.sidebar-link.active { @apply bg-sevaarth-600/20 text-sevaarth-300 border border-sevaarth-500/20; }
 
 /* Table */
 .data-table { @apply w-full text-sm; }

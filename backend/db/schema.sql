@@ -1,5 +1,5 @@
 -- ═══════════════════════════════════════════════════════════
--- VHEAL PATIENT PROTECTION OS — DATABASE SCHEMA
+-- SEVAARTH PATIENT PROTECTION OS — DATABASE SCHEMA
 -- ═══════════════════════════════════════════════════════════
 
 CREATE TABLE IF NOT EXISTS users (

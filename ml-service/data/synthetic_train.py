@@ -1,5 +1,5 @@
 """
-Synthetic Training Data Generator for VHEAL ML Models.
+Synthetic Training Data Generator for SEVAARTH ML Models.
 Generates realistic hospital billing, referral, and stay data.
 """
 import json
@@ -245,7 +245,7 @@ def generate_fraud_composite_data():
 
 
 if __name__ == '__main__':
-    print("🏥 VHEAL Synthetic Training Data Generator\n")
+    print("🏥 SEVAARTH Synthetic Training Data Generator\n")
     generate_billing_data()
     generate_stay_data()
     generate_referral_data()

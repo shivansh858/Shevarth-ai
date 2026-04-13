@@ -64,4 +64,4 @@ function StateBadge({ state }) {
   const cls = { ADMITTED:'badge-admitted', READY_SOON:'badge-ready-soon', DISCHARGING:'badge-discharging', DISCHARGED:'badge-discharged' }
   return <span className={`badge ${cls[state] || 'badge-low'}`}>{state}</span>
 }
-function Spinner() { return <div className="flex justify-center py-12"><div className="w-7 h-7 border-2 border-vheal-500/30 border-t-vheal-500 rounded-full animate-spin" /></div> }
+function Spinner() { return <div className="flex justify-center py-12"><div className="w-7 h-7 border-2 border-sevaarth-500/30 border-t-sevaarth-500 rounded-full animate-spin" /></div> }

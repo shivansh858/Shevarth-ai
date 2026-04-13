@@ -1,6 +1,6 @@
 export default function RightsPanel({ rights, govtSchemes }) {
   return (
-    <div className="card border-vheal-500/20">
+    <div className="card border-sevaarth-500/20">
       <h2 className="section-title">⚖️ Your Patient Rights</h2>
 
       {/* Contextual Rights */}
@@ -13,7 +13,7 @@ export default function RightsPanel({ rights, govtSchemes }) {
                 <div>
                   <h4 className="text-white font-semibold text-sm">{r.title}</h4>
                   <p className="text-gray-400 text-xs mt-1 leading-relaxed">{r.description}</p>
-                  {r.law_reference && <p className="text-vheal-400 text-[10px] mt-1 font-mono">{r.law_reference}</p>}
+                  {r.law_reference && <p className="text-sevaarth-400 text-[10px] mt-1 font-mono">{r.law_reference}</p>}
                   {r.actionable && <p className="text-emerald-400 text-xs mt-1 font-semibold">✓ {r.action_text || 'You can exercise this right now'}</p>}
                 </div>
               </div>
@@ -45,7 +45,7 @@ export default function RightsPanel({ rights, govtSchemes }) {
 
       {/* Always-visible fundamental rights */}
       <details className="mt-6">
-        <summary className="text-sm text-vheal-400 cursor-pointer hover:text-vheal-300">📖 Know Your Fundamental Patient Rights</summary>
+        <summary className="text-sm text-sevaarth-400 cursor-pointer hover:text-sevaarth-300">📖 Know Your Fundamental Patient Rights</summary>
         <div className="mt-3 space-y-2 text-xs text-gray-400">
           {[
             { emoji: '🏥', text: 'Right to emergency treatment without advance payment (Clinical Establishments Act)' },

@@ -8,11 +8,11 @@ export default function Login({ onLogin }) {
   const [error, setError] = useState('')
 
   const roleHints = [
-    { email: 'admin@vheal.com', pass: 'Admin@123', role: 'Admin', color: 'text-purple-400' },
-    { email: 'doctor@vheal.com', pass: 'Doctor@123', role: 'Doctor', color: 'text-blue-400' },
-    { email: 'nurse@vheal.com', pass: 'Nurse@123', role: 'Nurse', color: 'text-green-400' },
-    { email: 'pharmacy@vheal.com', pass: 'Pharmacy@123', role: 'Pharmacy', color: 'text-amber-400' },
-    { email: 'billing@vheal.com', pass: 'Billing@123', role: 'Billing', color: 'text-orange-400' },
+    { email: 'admin@sevaarth.com', pass: 'Admin@123', role: 'Admin', color: 'text-purple-400' },
+    { email: 'doctor@sevaarth.com', pass: 'Doctor@123', role: 'Doctor', color: 'text-blue-400' },
+    { email: 'nurse@sevaarth.com', pass: 'Nurse@123', role: 'Nurse', color: 'text-green-400' },
+    { email: 'pharmacy@sevaarth.com', pass: 'Pharmacy@123', role: 'Pharmacy', color: 'text-amber-400' },
+    { email: 'billing@sevaarth.com', pass: 'Billing@123', role: 'Billing', color: 'text-orange-400' },
   ]
 
   async function handleLogin(e) {
@@ -35,23 +35,23 @@ export default function Login({ onLogin }) {
       {/* Left Panel */}
       <div className="hidden lg:flex lg:w-1/2 flex-col justify-between p-12 relative overflow-hidden">
         {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-vheal-900/60 via-surface-900 to-surface-800" />
-        <div className="absolute top-0 left-0 w-96 h-96 bg-vheal-600/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute inset-0 bg-gradient-to-br from-sevaarth-900/60 via-surface-900 to-surface-800" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-sevaarth-600/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl translate-x-1/4 translate-y-1/4" />
 
         <div className="relative z-10">
           <div className="flex items-center gap-3 mb-2">
-            <div className="w-10 h-10 rounded-2xl bg-vheal-600 flex items-center justify-center text-xl font-black">V</div>
-            <span className="text-2xl font-black text-white tracking-tight">VHEAL</span>
+            <div className="w-10 h-10 rounded-2xl bg-sevaarth-600 flex items-center justify-center text-xl font-black">S</div>
+            <span className="text-2xl font-black text-white tracking-tight">Sevaarth AI</span>
           </div>
-          <p className="text-vheal-300 text-sm font-medium">Patient Protection OS</p>
+          <p className="text-sevaarth-300 text-sm font-medium">Patient Protection OS</p>
         </div>
 
         <div className="relative z-10 space-y-8">
           <div>
             <h1 className="text-4xl font-black text-white leading-tight mb-4">
               Hospital fraud<br />
-              <span className="text-vheal-400">made impossible.</span>
+              <span className="text-sevaarth-400">made impossible.</span>
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed">
               Real-time billing transparency, ML-powered fraud detection, and patient rights enforcement — built into every workflow.
@@ -81,7 +81,7 @@ export default function Login({ onLogin }) {
             { label: 'Live Updates', value: '15s' },
           ].map((s, i) => (
             <div key={i} className="bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-center">
-              <div className="text-2xl font-black text-vheal-300">{s.value}</div>
+              <div className="text-2xl font-black text-sevaarth-300">{s.value}</div>
               <div className="text-xs text-gray-500 mt-0.5">{s.label}</div>
             </div>
           ))}
@@ -93,8 +93,8 @@ export default function Login({ onLogin }) {
         <div className="w-full max-w-md animate-fade-in">
           {/* Mobile logo */}
           <div className="flex items-center gap-3 mb-8 lg:hidden">
-            <div className="w-9 h-9 rounded-xl bg-vheal-600 flex items-center justify-center text-lg font-black">V</div>
-            <span className="text-xl font-black text-white">VHEAL</span>
+            <div className="w-9 h-9 rounded-xl bg-sevaarth-600 flex items-center justify-center text-lg font-black">S</div>
+            <span className="text-xl font-black text-white">Sevaarth AI</span>
           </div>
 
           <h2 className="text-3xl font-bold text-white mb-2">Welcome back</h2>
@@ -108,7 +108,7 @@ export default function Login({ onLogin }) {
                 type="email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                placeholder="you@vheal.com"
+                placeholder="you@sevaarth.com"
                 className="input-field"
                 required
               />

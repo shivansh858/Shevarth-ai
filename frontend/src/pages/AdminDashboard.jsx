@@ -162,7 +162,7 @@ export default function AdminDashboard({ user }) {
               key={t.id}
               id={`tab-${t.id}`}
               onClick={() => setActiveTab(t.id)}
-              className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${activeTab === t.id ? 'bg-vheal-600 text-white' : 'text-gray-400 hover:text-white'}`}
+              className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${activeTab === t.id ? 'bg-sevaarth-600 text-white' : 'text-gray-400 hover:text-white'}`}
             >
               {t.label}
             </button>
@@ -241,7 +241,7 @@ export default function AdminDashboard({ user }) {
                 <div className="grid grid-cols-2 gap-3 text-sm">
                   <div><span className="text-gray-500">Login Email:</span><br/><span className="font-mono text-white">{registeredCreds.credentials?.email}</span></div>
                   <div><span className="text-gray-500">Password:</span><br/><span className="font-mono text-emerald-400 font-bold">{registeredCreds.credentials?.password}</span></div>
-                  <div><span className="text-gray-500">Patient ID:</span><br/><span className="font-mono text-vheal-300">{registeredCreds.patient_id}</span></div>
+                  <div><span className="text-gray-500">Patient ID:</span><br/><span className="font-mono text-sevaarth-300">{registeredCreds.patient_id}</span></div>
                   <div><span className="text-gray-500">State:</span><br/><span className="badge badge-admitted">{registeredCreds.state}</span></div>
                 </div>
                 <p className="text-xs text-gray-500 mt-3">QR URL: <span className="font-mono">{registeredCreds.qr_url}</span></p>
@@ -346,7 +346,7 @@ export default function AdminDashboard({ user }) {
 function LoadingSpinner() {
   return (
     <div className="flex items-center justify-center py-20">
-      <div className="w-8 h-8 border-2 border-vheal-500/30 border-t-vheal-500 rounded-full animate-spin" />
+      <div className="w-8 h-8 border-2 border-sevaarth-500/30 border-t-sevaarth-500 rounded-full animate-spin" />
     </div>
   )
 }

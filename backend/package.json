@@ -1,13 +1,13 @@
 {
-  "name": "vheal-backend",
+  "name": "sevaarth-backend",
   "version": "1.0.0",
-  "description": "VHEAL Patient Protection OS — Backend",
+  "description": "SEVAARTH Patient Protection OS — Backend",
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",
     "seed": "node db/seed.js",
-    "reset": "rm -f db/vheal.db && node db/seed.js"
+    "reset": "rm -f db/sevaarth.db && node db/seed.js"
   },
   "dependencies": {
     "axios": "^1.7.2",

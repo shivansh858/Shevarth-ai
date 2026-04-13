@@ -34,13 +34,13 @@ async function seed() {
 
   const insertUser = db.prepare(`INSERT INTO users (name, email, password_hash, role, department) VALUES (?, ?, ?, ?, ?)`);
   
-  insertUser.run('Admin', 'admin@vheal.com', adminHash, 'admin', 'Administration');
-  insertUser.run('Dr. Arjun Mehta', 'doctor@vheal.com', doctorHash, 'doctor', 'Medicine');
-  insertUser.run('Dr. Priya Sharma', 'doctor2@vheal.com', doctor2Hash, 'doctor', 'Surgery');
-  insertUser.run('Nurse Kavita', 'nurse@vheal.com', nurseHash, 'nurse', 'Nursing');
-  insertUser.run('Rajan Pharmacy', 'pharmacy@vheal.com', pharmacyHash, 'pharmacy', 'Pharmacy');
-  insertUser.run('Billing Officer Suresh', 'billing@vheal.com', billingHash, 'billing', 'Billing');
-  insertUser.run('Housekeeping Ram', 'housekeeping@vheal.com', housekeepingHash, 'housekeeping', 'Housekeeping');
+  insertUser.run('Admin', 'admin@sevaarth.com', adminHash, 'admin', 'Administration');
+  insertUser.run('Dr. Arjun Mehta', 'doctor@sevaarth.com', doctorHash, 'doctor', 'Medicine');
+  insertUser.run('Dr. Priya Sharma', 'doctor2@sevaarth.com', doctor2Hash, 'doctor', 'Surgery');
+  insertUser.run('Nurse Kavita', 'nurse@sevaarth.com', nurseHash, 'nurse', 'Nursing');
+  insertUser.run('Rajan Pharmacy', 'pharmacy@sevaarth.com', pharmacyHash, 'pharmacy', 'Pharmacy');
+  insertUser.run('Billing Officer Suresh', 'billing@sevaarth.com', billingHash, 'billing', 'Billing');
+  insertUser.run('Housekeeping Ram', 'housekeeping@sevaarth.com', housekeepingHash, 'housekeeping', 'Housekeeping');
 
   console.log('  ✅ Staff users created');
 
@@ -198,13 +198,13 @@ async function seed() {
   console.log('  ✅ 15 NABL labs created');
 
   console.log('\n🎉 Seed complete! Default credentials:');
-  console.log('  admin@vheal.com     / Admin@123');
-  console.log('  doctor@vheal.com    / Doctor@123');
-  console.log('  doctor2@vheal.com   / Doctor@123');
-  console.log('  nurse@vheal.com     / Nurse@123');
-  console.log('  pharmacy@vheal.com  / Pharmacy@123');
-  console.log('  billing@vheal.com   / Billing@123');
-  console.log('  housekeeping@vheal.com / House@123');
+  console.log('  admin@sevaarth.com     / Admin@123');
+  console.log('  doctor@sevaarth.com    / Doctor@123');
+  console.log('  doctor2@sevaarth.com   / Doctor@123');
+  console.log('  nurse@sevaarth.com     / Nurse@123');
+  console.log('  pharmacy@sevaarth.com  / Pharmacy@123');
+  console.log('  billing@sevaarth.com   / Billing@123');
+  console.log('  housekeeping@sevaarth.com / House@123');
 }
 
 seed().catch(err => {

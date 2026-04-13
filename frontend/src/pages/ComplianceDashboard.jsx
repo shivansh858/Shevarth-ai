@@ -134,7 +134,7 @@ export default function ComplianceDashboard({ user }) {
               <div className="stat-card text-center"><div className="text-2xl font-bold text-white">{patterns.dispute_stats.total_disputes || 0}</div><div className="label">Total</div></div>
               <div className="stat-card text-center"><div className="text-2xl font-bold text-emerald-400">{patterns.dispute_stats.resolved || 0}</div><div className="label">Resolved</div></div>
               <div className="stat-card text-center"><div className="text-2xl font-bold text-amber-400">{patterns.dispute_stats.open_disputes || 0}</div><div className="label">Open</div></div>
-              <div className="stat-card text-center"><div className="text-2xl font-bold text-vheal-300">₹{(patterns.dispute_stats.total_refunds || 0).toLocaleString()}</div><div className="label">Total Refunds</div></div>
+              <div className="stat-card text-center"><div className="text-2xl font-bold text-sevaarth-300">₹{(patterns.dispute_stats.total_refunds || 0).toLocaleString()}</div><div className="label">Total Refunds</div></div>
             </div>
           </div>
         )}
